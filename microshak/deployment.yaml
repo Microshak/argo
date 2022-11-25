@@ -21,6 +21,6 @@ spec:
         imagePullPolicy: Always
         ports:
           - name: web
-            containerPort: 8081
+            containerPort: 8080
       imagePullSecrets:
       - name: regcred
