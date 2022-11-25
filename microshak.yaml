@@ -7,7 +7,7 @@ spec:
   project: microshak
 
   source:
-    repoURL: https://gitlab.com/nanuchi/argocd-app-config.git
+    repoURL: https://github.com/Microshak/argo.git
     targetRevision: HEAD
     path: microshak
   destination: 
