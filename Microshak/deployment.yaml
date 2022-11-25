@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: default
+  name: microshak
+  labels:
+    app: microshak
+spec:
+  selector:
+    matchLabels:
+      app: microshak
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: microshak
+    spec:
+      containers:
+      - name: microshak
+        image: microshak/web:latest
+        imagePullPolicy: Always
+        ports:
+          - name: web
+            containerPort: 8080
+      imagePullSecrets:
+      - name: regcred
