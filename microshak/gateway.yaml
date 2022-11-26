@@ -1,0 +1,32 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: Gateway
+metadata:
+  name: default-gateway-ingress-http
+spec:
+  selector:
+    istio: ingressgateway # use Istio default gateway implementation
+  servers:
+  - port:
+      number: 80
+      name: http
+      protocol: HTTP
+    hosts:
+    - "*"
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: virtualservice-ingress-web-api--web-app
+spec:
+  hosts:
+  - "*"
+  gateways:
+  - default-gateway-ingress-http
+  http:
+  - match:
+    - uri:
+        prefix: /web-api/v1/getmultiple 
+    route:
+      - destination:
+          host: microshak
+          subset: v1
