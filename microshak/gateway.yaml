@@ -1,32 +1,18 @@
-apiVersion: networking.istio.io/v1alpha3
-kind: Gateway
+apiVersion: networking.k8s.io/v1
+kind: Ingress
 metadata:
-  name: default-gateway-ingress-http
+  annotations:
+    kubernetes.io/ingress.class: istio
+  name: ingress
 spec:
-  selector:
-    istio: ingressgateway # use Istio default gateway implementation
-  servers:
-  - port:
-      number: 80
-      name: http
-      protocol: HTTP
-    hosts:
-    - "*"
----
-apiVersion: networking.istio.io/v1alpha3
-kind: VirtualService
-metadata:
-  name: virtualservice-ingress-web-api--web-app
-spec:
-  hosts:
-  - "*"
-  gateways:
-  - default-gateway-ingress-http
-  http:
-  - match:
-    - uri:
-        prefix: /web-api/v1/getmultiple 
-    route:
-      - destination:
-          host: microshak
-          subset: v1
+  rules:
+  - host: microshak.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: microshak
+            port:
+              number: 80
