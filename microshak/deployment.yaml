@@ -1,26 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  namespace: microshak
-  name: microshak
   labels:
-    app: microshak
+    app: webserver
+  name: my-nginx
+  namespace: my-namespace
 spec:
+  replicas: 3
   selector:
     matchLabels:
-      app: microshak
-  replicas: 1
+      app: webserver
   template:
     metadata:
       labels:
-        app: microshak
+        app: webserver
     spec:
       containers:
-      - name: microshak
-        image: nginx
-        imagePullPolicy: Always
+      - image: nginx
+        name: my-nginx
         ports:
-          - name: web
-            containerPort: 80
-      imagePullSecrets:
-      - name: regcred
+        - containerPort: 80
