@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: microshak
-        image: microshak/web:latest
+        image: nginx
         imagePullPolicy: Always
         ports:
           - name: web
