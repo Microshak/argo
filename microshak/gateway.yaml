@@ -1,15 +1,15 @@
 apiVersion: networking.istio.io/v1alpha3
 kind: Gateway
 metadata:
-  namespace: microshak
   name: microshak-gateway
+  namespace: microshak
 spec:
   selector:
-    istio: ingressgateway # use the default IngressGateway
+    istio: ingressgateway
   servers:
   - port:
       number: 80
       name: http
       protocol: HTTP
     hosts:
-    - "microshak.com"
+      - "microshak.com"
