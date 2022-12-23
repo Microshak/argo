@@ -3,8 +3,8 @@ kind: Deployment
 metadata:
   labels:
     app: webserver
-  name: my-nginx
-  namespace: my-namespace
+  name: microshak
+  namespace: microshak
 spec:
   replicas: 3
   selector:
@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
       - image: nginx
-        name: my-nginx
+        name: microshak
         ports:
         - containerPort: 80
