@@ -1,6 +1,7 @@
 apiVersion: networking.istio.io/v1alpha3
 kind: Gateway
 metadata:
+  namespace: microshak
   name: microshak-gateway
 spec:
   selector:
