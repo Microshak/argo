@@ -5,7 +5,7 @@ metadata:
   namespace: microshak
 spec:
   hosts:
-  - "microshak.com"
+  - "www.microshak.com"
   gateways:
   - microshak-gateway
   http:
@@ -16,4 +16,4 @@ spec:
     - destination:
         port:
           number: 80
-        host: webserver
+        host: webserve
