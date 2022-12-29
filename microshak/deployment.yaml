@@ -16,7 +16,7 @@ spec:
         app: webserver
     spec:
       containers:
-      - image: microshak/web:latest
+      - image: microshak/indexeddb:latest
         name: microshak
         ports:
         - containerPort: 80
