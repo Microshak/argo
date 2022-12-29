@@ -12,4 +12,5 @@ spec:
       name: http
       protocol: HTTP
     hosts:
+      - "microshak.com"
       - "www.microshak.com"
