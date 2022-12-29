@@ -16,7 +16,7 @@ spec:
         app: webserver
     spec:
       containers:
-      - image: nginx
+      - image: microshak/web:latest
         name: microshak
         ports:
         - containerPort: 80
