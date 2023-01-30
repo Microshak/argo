@@ -6,8 +6,10 @@ metadata:
 spec:
   hosts:
   - "www.microshak.com"
+  - "microshak.com"
+  - "microshak.cluster.local"
   gateways:
-  - microshak-gateway
+  - microshak/microshak-gateway
   http:
   - match:
     - uri:

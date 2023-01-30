@@ -5,13 +5,12 @@ metadata:
   namespace: microshak
 spec:
   selector:
-    app: microshak-gateway-controller
+    istio: ingressgateway
   servers:
   - port:
       number: 80
       name: http
       protocol: HTTP
     hosts:
-    - microshak.com
-    - www.microshak.com
-    
+      - "microshak.com"
+      - "www.microshak.com"
