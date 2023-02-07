@@ -19,4 +19,4 @@ spec:
     - destination:
         port:
           number: 80
-        host: webserve
+        host: microshak.cluster.local
