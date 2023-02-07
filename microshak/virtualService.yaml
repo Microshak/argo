@@ -8,6 +8,7 @@ spec:
   - "www.microshak.com"
   - "microshak.com"
   - "microshak.cluster.local"
+  - "174.164.190.125"
   gateways:
   - microshak/microshak-gateway
   http:
