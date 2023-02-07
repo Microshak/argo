@@ -4,7 +4,7 @@ metadata:
   name: microshak.web.ui3
   namespace: argocd
 spec:
-  project: default
+  project: microshak
 
   source:
     repoURL: https://github.com/Microshak/argo.git
