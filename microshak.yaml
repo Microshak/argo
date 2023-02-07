@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: microshak.web.ui2
+  name: microshak.web.ui
   namespace: argocd
 spec:
   project: default
