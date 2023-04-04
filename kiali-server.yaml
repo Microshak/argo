@@ -1,0 +1,24 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: kiali-server
+  namespace: kiali-server
+spec:
+  project: kiali-server
+
+  source:
+    repoURL: https://github.com/Microshak/argo.git
+    targetRevision: HEAD
+    path: kiali-server
+  destination: 
+    server: https://kubernetes.default.svc
+    namespace: kiali-server
+
+  syncPolicy:
+    automated:
+      prune: true
+      allowEmpty: true
+      selfHeal: true
+    syncOptions:
+    - CreateNamespace=true
+
