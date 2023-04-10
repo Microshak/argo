@@ -1,16 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  labels:
-    app: microshak
-  name: webserver
-  namespace: microshak
+  name: microshak-webserver
 spec:
-  ports:
-  - name: http
-    port: 80
-    protocol: TCP
-    targetPort: 80
   selector:
-    app: webserver
-  type: ClusterIP
+    app: microshak-webserver
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80

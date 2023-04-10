@@ -1,24 +1,17 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: microshak.web.ui
-  namespace: microshak
+  name: microshak-webserver
 spec:
-  project: microshak
-
+  destination:
+    namespace: default
+    server: https://kubernetes.default.svc
   source:
     repoURL: https://github.com/Microshak/argo.git
+    path: .
     targetRevision: HEAD
-    path: microshak
-  destination: 
-    server: https://kubernetes.default.svc
-    namespace: microshak
-
+  project: default
   syncPolicy:
     automated:
       prune: true
-      allowEmpty: true
       selfHeal: true
-    syncOptions:
-    - CreateNamespace=true
-

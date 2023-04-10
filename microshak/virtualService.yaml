@@ -10,7 +10,7 @@ spec:
   - "microshak.cluster.local"
   - "174.164.190.125"
   gateways:
-  - microshak/microshak-gateway
+  - microshak-gateway
   http:
   - match:
     - uri:
