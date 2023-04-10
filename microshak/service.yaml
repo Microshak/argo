@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: microshak-webserver
+  name: microshak-service
 spec:
   selector:
-    app: microshak-webserver
+    app: microshak-service
   ports:
   - protocol: TCP
     port: 80

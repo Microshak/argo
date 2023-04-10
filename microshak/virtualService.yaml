@@ -1,22 +1,15 @@
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
 metadata:
-  name: microshak-virtualservice
-  namespace: microshak
+  name: microshak-service
 spec:
   hosts:
-  - "www.microshak.com"
-  - "microshak.com"
-  - "microshak.cluster.local"
-  - "174.164.190.125"
+  - "*"
   gateways:
   - microshak-gateway
   http:
-  - match:
-    - uri:
-        prefix: /
-    route:
+  - route:
     - destination:
+        host: microshak-service
         port:
           number: 80
-        host: microshak.cluster.local
