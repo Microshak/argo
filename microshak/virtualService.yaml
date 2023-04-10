@@ -4,12 +4,12 @@ metadata:
   name: microshak
 spec:
   hosts:
-  - "microshak.com"
+    - "microshak.com"
   gateways:
-  - microshak-gateway
+    - microshak-gateway
   http:
-  - route:
-    - destination:
-        host: microshak-service.default.svc.cluster.local
-        port:
-          number: 80
+    - route:
+      - destination:
+          host: microshak-service.default.svc.cluster.local
+          port:
+            number: 80
