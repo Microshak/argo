@@ -10,6 +10,6 @@ spec:
   http:
   - route:
     - destination:
-        host: microshak-service.svc.cluster.local
+        host: microshak-service.default.svc.cluster.local
         port:
           number: 80
