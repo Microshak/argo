@@ -5,6 +5,7 @@ metadata:
 spec:
   hosts:
   - "microshak.com"
+  - "www.microshak.com"
   gateways:
   - microshak-gateway
   http:
