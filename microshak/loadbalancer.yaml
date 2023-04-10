@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: test-service
+  annotations:
+    metallb.universe.tf/address-pool: custom-addresspool
+spec:
+  selector:
+    name: nginx
+  type: LoadBalancer
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
