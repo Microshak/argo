@@ -11,5 +11,5 @@ spec:
       name: http
       protocol: HTTP
     hosts:
-    - ""
+    - "microshak-service.default.svc.cluster.local"
 
