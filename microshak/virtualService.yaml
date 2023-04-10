@@ -1,15 +1,15 @@
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
 metadata:
-  name: microshak-service
+  name: microshak
 spec:
   hosts:
-  - "*"
+  - "microshak.com"
   gateways:
   - microshak-gateway
   http:
   - route:
     - destination:
-        host: microshak-service
+        host: microshak
         port:
           number: 80
