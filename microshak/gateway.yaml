@@ -6,11 +6,11 @@ spec:
   selector:
     istio: ingressgateway
   servers:
-  - port:
-      number: 80
-      name: microshak-com
-      protocol: HTTP
-    hosts:
-    - "microshak.com"
+    - port:
+        number: 80
+        name: microshak-com
+        protocol: HTTP
+      hosts:
+        - "microshak.com"
 
 
