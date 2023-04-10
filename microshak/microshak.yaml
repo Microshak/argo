@@ -1,8 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: microshak-webserver
-spec:
+  name: microshak-service
   destination:
     namespace: default
     server: https://kubernetes.default.svc
