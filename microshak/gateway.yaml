@@ -8,9 +8,9 @@ spec:
   servers:
   - port:
       number: 80
-      name: http
+      name: microshak-com
       protocol: HTTP
     hosts:
-    - "*"
+    - "microshak.com"
 
 
