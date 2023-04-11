@@ -4,7 +4,7 @@ metadata:
   name: microshak-service
 spec:
   selector:
-    app: microshak-service
+    app: microshak-web
   ports:
   - protocol: TCP
     port: 80
