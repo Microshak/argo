@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: microshak-service
+  name: microshak-web
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: microshak-service
+      app: microshak-web
   template:
     metadata:
       labels:
-        app: microshak-service
+        app: microshak-web
     spec:
       containers:
-      - name: microshak-service
+      - name: microshak-web
         image: microshak/indexeddb:latest
         ports:
         - containerPort: 80
