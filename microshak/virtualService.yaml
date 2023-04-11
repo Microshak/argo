@@ -15,4 +15,4 @@ spec:
     - destination:
         port:
           number: 80
-        host: microshak-service.default.svc.cluster.local
+        host: microshak
