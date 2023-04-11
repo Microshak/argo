@@ -1,14 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: microservice
-  labels:
-    app: microservice
-    service: microservice
+  name: cool-app-service
 spec:
-  selector:
-    app: microshak-web
+  type: LoadBalancer
   ports:
   - name: http
     port: 80
-  type: LoadBalancer
+    targetPort: 80
+    protocol: TCP
+  selector:
+    app: cool-app

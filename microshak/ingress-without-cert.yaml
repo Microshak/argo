@@ -5,15 +5,9 @@ metadata:
     # use the shared ingress-nginx
   annotations:
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
-    cert-manager.io/cluster-issuer: "letsencrypt-staging"
 spec:
-  tls:
-    - hosts:
-      - microhsak.com
-      secretName: tls-secret
   rules:
-  - host: microshak.com
-    http:
+  - http:
       paths:
       - path: /
         pathType: Prefix

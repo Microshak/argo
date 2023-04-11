@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: microshak-web
+  name: cool-app
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: microshak-web
+      app: cool-app
   template:
     metadata:
       labels:
-        app: microshak-web
+        app: cool-app
+        label-key : cool-app-key
     spec:
       containers:
-      - name: microshak-web
-        image: microshak/indexeddb:latest
-        ports:
-        - containerPort: 80
-          name: service
-          protocol: TCP
+        - name: cool-app-container
+          image: microshak/indexeddb:latest
+          imagePullPolicy: Always
+          ports:
+          - containerPort: 80
