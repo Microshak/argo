@@ -15,4 +15,4 @@ spec:
     - destination:
         port:
           number: 80
-        host: microshak.com
+        host: microshak-web.default.svc.local
